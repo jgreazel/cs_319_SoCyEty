@@ -55,6 +55,9 @@ class App extends React.Component{
                     <label>Password</label><br />
                     <input type="password" data-test="password" value={this.state.password} onChange={this.handlePassChange}/><br/><br/>
                     <input type="submit" value="Log in" data-test="submit" />
+					<input type="button" value="Sign up"/>
+					<br></br>
+					<br></br>
                     {
                         this.state.error &&
                         <p data-test="error" onClick={this.dismissError}>

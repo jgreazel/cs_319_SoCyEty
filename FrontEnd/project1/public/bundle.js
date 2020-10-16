@@ -100,6 +100,9 @@ var App = function (_React$Component) {
                     React.createElement('br', null),
                     React.createElement('br', null),
                     React.createElement('input', { type: 'submit', value: 'Log in', 'data-test': 'submit' }),
+                    React.createElement('input', { type: 'button', value: 'Sign up' }),
+                    React.createElement('br', null),
+                    React.createElement('br', null),
                     this.state.error && React.createElement(
                         'p',
                         { 'data-test': 'error', onClick: this.dismissError },
