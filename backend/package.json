@@ -4,13 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node .",
-    "dev": "nodemon ."
+    "start": "node ./bin/server",
+    "dev": "nodemon ./bin/server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.17.5"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
   }
 }

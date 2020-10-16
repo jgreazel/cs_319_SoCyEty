@@ -1,9 +1,10 @@
-const DEFAULT_PROPERTIES ={
+const DEFAULT_PROPERTIES = {
     author: 'unknown',
     commentBody: '',
     dateCommented: new Date()
 }
 
+//TODO: implement ids
 class Comment{
     constructor({author, commentBody, dateCommented}){
         this.author = author || DEFAULT_PROPERTIES.author;

@@ -7,6 +7,7 @@ const DEFAULT_PROPERTIES ={
     datePosted: new Date()
 }
 
+//TODO: add post id, maybe comments is only list of comment ids?
 class Post{
     constructor({author, postBody, comments, datePosted}){
         this.author = author || DEFAULT_PROPERTIES.author;
