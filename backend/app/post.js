@@ -1,16 +1,17 @@
 const Comment = require('./comment');
 
-const DEFAULT_PROPERTIES ={
-    author: 'unknown',
+const DEFAULT_PROPERTIES = {
+    postId: undefined,
+    postAuthor: undefined,
     postBody: '',
     comments: [],
     datePosted: new Date()
 }
 
-//TODO: add post id, maybe comments is only list of comment ids?
 class Post{
-    constructor({author, postBody, comments, datePosted}){
-        this.author = author || DEFAULT_PROPERTIES.author;
+    constructor({postId, postAuthor, postBody, comments, datePosted}){
+        this.postId = postId || DEFAULT_PROPERTIES.postId;
+        this.postAuthor = postAuthor || DEFAULT_PROPERTIES.postAuthor;
         this.postBody = postBody || DEFAULT_PROPERTIES.postBody;
         this.comments = comments || DEFAULT_PROPERTIES.comments;
         this.datePosted = datePosted || DEFAULT_PROPERTIES.datePosted;
@@ -22,7 +23,7 @@ class Post{
         }
 
         this.comments.push(new Comment({
-            author: comment.author,
+            commentAuthor: comment.commentAuthor,
             commentBody: comment.commentBody,
             dateCommented: comment.dateCommented
         }));
