@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import Post from './components/Post';
+import AllPosts from './components/AllPosts';
 
 render(
     <div>
-        <h2>Posts</h2>
-        <Post/>
+        <h2>SoCYety</h2>
+        <AllPosts/>
     </div>,
     document.getElementById('root')
 );

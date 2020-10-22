@@ -1,22 +1,12 @@
 import React, {Component} from 'react';
 
 class Post extends Component {
-    render(){
-        //dummy data for dummy data
-        const post = {
-            "postId": 1,
-            "postAuthor": "Jon",
-            "postBody": "First Post",
-            "comments": [],
-            "datePosted": "2020-10-15T15:56:18.958Z"
-        };
 
+    render(){
+        const { postAuthor, datePosted, postBody} = this.props.data;
+        console.log(postAuthor)
         return(
-            <div>
-                <h3>Post: {post.postId}. By: {post.postAuthor}</h3>
-                <h4>Posted On: {new Date(post.datePosted).toString()}</h4>
-                <h4>{post.postBody}</h4>
-            </div>
+        <div>{postAuthor}</div>
         )
     }
 }
