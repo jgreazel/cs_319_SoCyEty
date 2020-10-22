@@ -3,10 +3,14 @@ import React, {Component} from 'react';
 class Post extends Component {
 
     render(){
-        const { postAuthor, datePosted, postBody} = this.props.data;
-        console.log(postAuthor)
+        const { postId, postAuthor, datePosted, postBody} = this.props.data;
+        const displayDate = new Date(datePosted);
         return(
-        <div>{postAuthor}</div>
+        <div key={postId} className='card'>
+            <h4>{postAuthor}</h4>
+            <p>{displayDate.getMonth() + '/' + displayDate.getDate() + '/' + displayDate.getFullYear()}</p>
+            <p>{postBody}</p>
+        </div>
         )
     }
 }

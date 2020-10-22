@@ -22,7 +22,6 @@ class AllPosts extends Component{
     render(){
         return(
             <div>
-                hello
                 {this.state.posts.map(post => 
                     <Post data={post}></Post>
                 )}
