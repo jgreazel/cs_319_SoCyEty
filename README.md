@@ -11,7 +11,7 @@ If you run into issues starting the project:
 -run 'npm install' in frontend and backend directories separately to install dependecies 
 -may need to install nodemon by itself in backend folder
     -'npm i nodemon@1.17.5'
--run 'npm i -g parcel-bunder' & 'npm install -g foreman' in the root directory (g23)
+-run 'npm i -g parcel-bundler' & 'npm install -g foreman' in the root directory (g23)
     -if you run into permission issues preceed the command with 'sudo npm ...'
     -parcel is the bundler used by our front end
 
