@@ -7,7 +7,8 @@ const commentRouter = require('../api/comment');
 
 const app = express();
 
-app.use(cors({ origin: 'http://localhost:5100'}));
+// may be 1234 or 5100 -- seems inconsistent 
+app.use(cors({ origin: 'http://localhost:1234'}));
 app.use('/post', postRouter);
 app.use('/comment', commentRouter);
 
