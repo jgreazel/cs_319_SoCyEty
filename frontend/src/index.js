@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import Cyclone from "./assets/CycloneIndexLogo.png";
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Homework from './components/Homework';
@@ -68,6 +69,7 @@ class App extends React.Component{
         }
         return(
             <div class="a">
+				<img src={Cyclone} alt="Cyclone Logo"/>
                 <h1>
                     <logo>SoCYety</logo>
                 </h1>
@@ -80,6 +82,7 @@ class App extends React.Component{
 					<input type="button" value="Sign up" />
 					<br></br>
 					<br></br>
+					<div class="g-signin2" data-onsuccess="onSignIn"></div>
                     {
                         this.state.error &&
                         <p data-test="error" onClick={this.dismissError}>
