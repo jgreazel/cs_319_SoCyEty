@@ -8,6 +8,11 @@
     border-color: #4d0000;
 }
 
+img {
+	max-width:50%;
+	height: auto;
+}
+
 body {
     margin:0;
     background-color: #F1BE48;
@@ -27,7 +32,7 @@ div.a{
     background-color: aliceblue;
     text-align: center;
     width: 220px;
-    height: 220px;
+    height: 420px;
     padding: 1%;
 }
 
@@ -79,6 +84,10 @@ div.a{
     content:"";
     display: table;
     clear: both;
+}
+
+.g-signin2 > div{
+  margin: 0 auto;
 }
 
 @media screen and (max-width:600px){
