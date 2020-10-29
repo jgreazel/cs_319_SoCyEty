@@ -8,11 +8,6 @@
     border-color: #4d0000;
 }
 
-img {
-	max-width:50%;
-	height: auto;
-}
-
 body {
     margin:0;
     background-color: #F1BE48;
@@ -32,14 +27,20 @@ div.a{
     background-color: aliceblue;
     text-align: center;
     width: 220px;
-    height: 420px;
+    height: 320px;
     padding: 1%;
+}
+
+.image_header{
+    width:5%;
+    height:5%;
 }
 
 .header {
     background-color: #C8102E;
     color: white;
     text-align: center;
+    font-size: xx-large;
     padding: 1%;
 }
 
