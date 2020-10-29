@@ -27,7 +27,7 @@ class Comments extends React.Component {
                 </nav>
                 <form onSubmit="return false;">
                     <textarea class="comment" placeholder="Type your comments here"></textarea>
-                    <br/>
+                    <br />
                     <input type="submit" value="Submit"/>
                 </form>
             </div>
