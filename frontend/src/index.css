@@ -96,3 +96,17 @@ div.a{
         width: 100%;
     }
 }
+
+nav ul{
+    height:200px;
+    width:85%;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.comment{
+    width: 90%;
+    height: 80px;
+    padding: 10px;
+    background-color: #F1BE48;
+}
