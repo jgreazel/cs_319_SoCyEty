@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Cyclone from "./assets/CycloneIndexLogo.png";
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Homework from './components/Homework';
@@ -69,7 +68,6 @@ class App extends React.Component{
         }
         return(
             <div class="a">
-				<img src={Cyclone} alt="Cyclone Logo"/>
                 <h1>
                     <logo>SoCYety</logo>
                 </h1>
