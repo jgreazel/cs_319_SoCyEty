@@ -1,6 +1,6 @@
 const { Router } = require('express');
-const Post = require('../app/post');
-const DUMMY_DATA = require('../data/posts');
+// const Solution = require('../app/solution');
+const DUMMY_DATA = require('../data/solutions');
 
 const router = new Router();
 

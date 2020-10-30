@@ -16,3 +16,4 @@ If you run into issues starting the project:
     -parcel is the bundler used by our front end
 
 
+MySQL root user password is ab91c2e7f776bd1a
