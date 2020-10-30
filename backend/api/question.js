@@ -4,10 +4,18 @@ const QuestionTable = require('./../app/question/questionTable');
 
 const router = new Router();
 
-//testing api -- not sure we'll need it if I handle comments by just adding them to a post
 router.get('/all', (req, res)=>{
-    // res.json(new Comment({author: 'Jon', commentBody: 'hello, good post'}))
-    const questions = QuestionTable.getAllQuestions();
-})
+    QuestionTable.getAllQuestions()
+        .then((rows)=>{
+            res.json(rows);
+        })
+        .catch((error)=>{
+            error(error);
+        })
+});
+
+// router.get('/new', (req, res)=>{
+
+// });
 
 module.exports = router;
