@@ -15,8 +15,11 @@ If you run into issues starting the project:
         -if you run into permission issues preceed the command with 'sudo npm ...'
         -parcel is the bundler used by our front end
 
-MySql stuff:
+Sql stuff:
     -MySQL root user password is ab91c2e7f776bd1a
         -this is for our iastate server, but I haven't transferred anything to it yet
-    -Not Tested: Code is currently able to connect to a database, but none has been created
-        -it might be simpler to run a local database for now, need to look more into how to start one up
+    -I switched to using postres SQL since I had a better example to go off of
+        -you'll need to install posgres then run the following commands in a command prompt(git bash didn't work for me for some reason)
+            -createdb -U posrgres socyetydb
+            -psql -U postgres socyetydb
+        -then run the npm configure script in backend
