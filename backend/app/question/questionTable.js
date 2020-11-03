@@ -7,7 +7,7 @@ class QuestionTable{
                 if(err){
                     return reject(err);
                 }
-                resolve(response.rows); //may need to do rows.rows[0] or some other variation
+                resolve(response.rows); 
             })
         })
     }
