@@ -10,12 +10,20 @@ router.get('/all', (req, res)=>{
             res.json(rows);
         })
         .catch((error)=>{
-            error(error);
+            console.log(error);
         })
 });
 
-// router.get('/new', (req, res)=>{
-
-// });
+router.get('/new/:questionBody/:questionAuthor', (req, res)=>{
+    let newQ = new Question({questionBody: req.params.questionBody, questionAuthor: req.params.questionAuthor});
+    console.log('newQ', newQ);
+    QuestionTable.storeQuestion(newQ)
+        .then((rows)=>{
+            res.json(rows);
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+});
 
 module.exports = router;
