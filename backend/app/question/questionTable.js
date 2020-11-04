@@ -22,7 +22,7 @@ class QuestionTable{
                     if(err) return reject(err);
 
                     const qId = response.rows[0].id;
-                    resolve({qId})
+                    resolve({qId});
                 }
             )
         })

@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const Solution = require('./solution/solution');
-const Comment = require('./comment');
+// const Solution = require('./solution/solution');
+// const Comment = require('./comment/comment');
 const solutionRouter = require('../api/solution');
 const commentRouter = require('../api/comment');
 const questionRouter = require('../api/question');
