@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="130b6e57-3d9f-4667-a29f-ae215d460c5b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/Nav.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Nav.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="130b6e57-3d9f-4667-a29f-ae215d460c5b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -79,7 +76,7 @@
       <workItem from="1604006572679" duration="133000" />
       <workItem from="1604068419014" duration="1221000" />
       <workItem from="1604093193364" duration="10000" />
-      <workItem from="1604536664135" duration="6480000" />
+      <workItem from="1604536664135" duration="7981000" />
     </task>
     <task id="LOCAL-00001" summary="added post comment box">
       <created>1603949150546</created>
