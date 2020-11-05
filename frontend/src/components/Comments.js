@@ -17,12 +17,6 @@ class Comments extends React.Component {
                         <li>Comment 8</li>
                         <li>Comment 9</li>
                         <li>Comment 10</li>
-                        <li>Comment 11</li>
-                        <li>Comment 12</li>
-                        <li>Comment 13</li>
-                        <li>Comment 14</li>
-                        <li>Comment 15</li>
-                        <li>Comment 16</li>
                     </ul>
                 </nav>
                 <form onSubmit="return false;">

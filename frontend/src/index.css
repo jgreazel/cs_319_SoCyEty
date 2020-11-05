@@ -61,6 +61,7 @@ div.a{
 .topnav a:hover{
     background-color: darkslategray;
     color: black;
+    cursor: pointer;
 }
 
 .column{
