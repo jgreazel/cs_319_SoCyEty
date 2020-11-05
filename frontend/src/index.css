@@ -98,10 +98,13 @@ div.a{
 }
 
 nav ul{
+    list-style-type: none;
     height:200px;
-    width:85%;
+    width:255px;
     overflow: hidden;
     overflow-y: scroll;
+    padding-left: 0;
+    padding-bottom: 10px;
 }
 
 .comment{

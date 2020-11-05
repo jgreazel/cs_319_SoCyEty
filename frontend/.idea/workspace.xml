@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="130b6e57-3d9f-4667-a29f-ae215d460c5b" name="Default Changelist" comment="" />
+    <list default="true" id="130b6e57-3d9f-4667-a29f-ae215d460c5b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Comments.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Comments.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,6 +75,12 @@
       <workItem from="1603578968891" duration="2145000" />
       <workItem from="1603943279413" duration="4082000" />
       <workItem from="1603948947848" duration="248000" />
+      <workItem from="1603949262457" duration="455000" />
+      <workItem from="1603985768468" duration="155000" />
+      <workItem from="1604006572679" duration="133000" />
+      <workItem from="1604068419014" duration="1221000" />
+      <workItem from="1604093193364" duration="10000" />
+      <workItem from="1604536664135" duration="5200000" />
     </task>
     <task id="LOCAL-00001" summary="added post comment box">
       <created>1603949150546</created>

@@ -7,8 +7,8 @@ class Comments extends React.Component {
                 <h2>Discussion</h2>
                 <nav>
                     <ul>
-                        <li>Comment 1</li>
-                        <li>Comment 2</li>
+                        <li>Xin Jun: Blah blah blah</li>
+                        <li>Person 2: Blah blah blah</li>
                         <li>Comment 3</li>
                         <li>Comment 4</li>
                         <li>Comment 5</li>
