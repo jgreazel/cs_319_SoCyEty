@@ -61,6 +61,7 @@ div.a{
 .topnav a:hover{
     background-color: darkslategray;
     color: black;
+    cursor: pointer;
 }
 
 .column{
@@ -95,4 +96,29 @@ div.a{
     .column.side, .column.middle{
         width: 100%;
     }
+}
+
+ul{
+    color: black;
+    list-style-type: none;
+    height:200px;
+    width:255px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding-left: 0;
+    padding-bottom: 10px;
+    border: 1px;
+}
+
+ul li{
+    margin: 10px;
+    background: aliceblue;
+    padding:1%;
+    border-radius: 25px;
+}
+.comment{
+    width: 90%;
+    height: 70px;
+    padding: 10px;
+    background-color: #F1BE48;
 }

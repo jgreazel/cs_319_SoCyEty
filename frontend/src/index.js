@@ -8,8 +8,8 @@ import Comments from './components/Comments';
 import Solution from './components/Solution';
 
 class App extends React.Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             netID: '',
             password: '',
@@ -21,6 +21,7 @@ class App extends React.Component{
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handlePassChange = this.handlePassChange.bind(this);
         this.handleNetIDChange = this.handleNetIDChange.bind(this);
+        this.handleLogOut = this.handleLogOut.bind(this);
     }
 
     dismissError(){
@@ -54,12 +55,16 @@ class App extends React.Component{
         });
     }
 
+    handleLogOut(){
+        this.setState({login_success: false});
+    }
+
     render(){
         if(this.state.login_success){
             return(
                 <div>
                     <Header />
-                    <Nav/>
+                    <Nav handleLogOut={this.handleLogOut}/>
                     <Homework />
                     <Solution />
                     <Comments />
