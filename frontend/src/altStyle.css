@@ -1,0 +1,48 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 350px;
+    border-style: solid;
+    border-width: 2px; 
+    margin: 10px;
+    border-color: #4d0000;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 8px;
+    background-color: white;
+}
+
+logo{
+    background-color: #C8102E;
+    color: white;
+    border: 1px solid black;
+    padding: 5px 20px;
+    font-weight: bold;
+}
+
+.header {
+    font-family: "Impact", Charcoal, sans-serif;
+    background-color: #C8102E;
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    padding: 1%;
+}
+
+body {
+    margin:0;
+    background-color: #F1BE48;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.image_header{
+    width:5%;
+    height:5%;
+}
+
+.column{
+    width: 20%;
+    height: 700px;
+    padding-left: 11%;
+    float: left;
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+// import './altStyle.css';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Homework from './components/Homework';
@@ -14,7 +15,8 @@ class App extends React.Component{
             netID: '',
             password: '',
             error: '',
-            login_success: false,
+            login_success: false, // set true for testing
+            questions: []
         };
 
         this.dismissError = this.dismissError.bind(this);
@@ -22,6 +24,20 @@ class App extends React.Component{
         this.handlePassChange = this.handlePassChange.bind(this);
         this.handleNetIDChange = this.handleNetIDChange.bind(this);
         this.handleLogOut = this.handleLogOut.bind(this);
+    }
+
+    componentDidMount(){
+        this.fetchAllQuestions();
+    }
+
+    fetchAllQuestions = () =>{
+        fetch('http://localhost:3000/question/all')
+            .then( response => response.json())
+            .then(json => {
+                console.log(json)
+                this.setState({ questions: json})
+            })
+            .catch(error => console.log('error', error));
     }
 
     dismissError(){
@@ -38,7 +54,8 @@ class App extends React.Component{
             return this.setState({error: 'Please enter password' });
         }
         else{
-            this.setState({login_success: true});
+            const author = this.state.netID;
+            this.setState({login_success: true, netID: author});
         }
         return this.setState({error: '' });
     }
@@ -65,7 +82,10 @@ class App extends React.Component{
                 <div>
                     <Header />
                     <Nav handleLogOut={this.handleLogOut}/>
-                    <Homework />
+                    <Homework 
+                        questions={this.state.questions} 
+                        author={this.state.netID}
+                        fetchAll={this.fetchAllQuestions}/>
                     <Solution />
                     <Comments />
                 </div>

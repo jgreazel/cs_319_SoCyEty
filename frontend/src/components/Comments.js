@@ -3,11 +3,11 @@ import React from 'react';
 class Comments extends React.Component {
     render() {
         return (
-            //<div class="column side">
-            <div class="column">
+            // <div class="column side">
+            <div class="column"> 
                 <h2>Discussion</h2>
                 <nav>
-                    <ul>
+                    <ul class="comment-ul">
                         <li>Xin Jun: Blah blah blah</li>
                         <li>Person 2: Blah blah blah</li>
                         <li>Comment 3</li>
