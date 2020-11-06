@@ -3,12 +3,12 @@ import React from 'react';
 class Nav extends React.Component {
     render() {
         return (
-            <div class="topnav">
-                <a onClick={()=> this.props.handleLogOut()}>Log out</a>
-                <a href="index.html">Home</a>
-                <a href="#">Link</a>
-                <a href="#">Link</a>
-            </div>
+            <ul class="sidenav">
+                <li><a onClick={()=> this.props.handleLogOut()}>Log out</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+            </ul>
         );
     }
 }
