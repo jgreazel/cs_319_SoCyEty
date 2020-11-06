@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import './altStyle.css';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Homework from './components/Homework';
