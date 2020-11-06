@@ -6,6 +6,10 @@
     border-width: 2px; 
     margin: 10px;
     border-color: #4d0000;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 8px;
+    background-color: white;
 }
 
 body {
@@ -37,14 +41,15 @@ div.a{
 }
 
 .header {
+    font-family: "Impact", Charcoal, sans-serif;
     background-color: #C8102E;
     color: white;
     text-align: center;
-    font-size: xx-large;
+    font-size: 80px;
     padding: 1%;
 }
 
-.topnav{
+/* .topnav{
     overflow: hidden;
     background-color: #C8102E;
 }
@@ -61,8 +66,7 @@ div.a{
 .topnav a:hover{
     background-color: darkslategray;
     color: black;
-    cursor: pointer;
-}
+} 
 
 .column{
     float: left;
@@ -76,10 +80,22 @@ div.a{
     height: 700px;
 }
 
-.column.middle{
-    background-color: aliceblue;
+*/
+
+.column{
     width: 55%;
     height: 700px;
+    padding-left: 12%;
+}
+
+.posts_heading
+{
+    margin-left: 10px;
+}
+
+.homework_heading
+{
+    margin-left: 20px;
 }
 
 .row:after{
@@ -92,33 +108,64 @@ div.a{
   margin: 0 auto;
 }
 
-@media screen and (max-width:600px){
-    .column.side, .column.middle{
-        width: 100%;
-    }
-}
-
-ul{
-    color: black;
+/* SIDE NAVIGATION BAR */
+ul.sidenav {
     list-style-type: none;
-    height:200px;
-    width:255px;
-    overflow: hidden;
-    overflow-y: scroll;
-    padding-left: 0;
-    padding-bottom: 10px;
-    border: 1px;
-}
-
-ul li{
-    margin: 10px;
-    background: aliceblue;
-    padding:1%;
-    border-radius: 25px;
-}
-.comment{
-    width: 90%;
-    height: 70px;
-    padding: 10px;
-    background-color: #F1BE48;
+    margin: 0;
+    padding: 0;
+    width: 10%;
+    background-color: white;
+    /* TODO HEIGHT NEEDS TO BE DYNAMIC */
+    height: 300%;
+    position: absolute;
+    overflow: auto;
+    clear: both;
+  }
+  
+  ul.sidenav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    margin: 2px;
+    border: 2px solid black;
+    background-color: rgb(220, 220, 220);
+  }
+   
+  ul.sidenav li a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  ul.sidenav li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+  }
+  
+  div.content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: 1000px;
+  }
+  
+  @media screen and (max-width: 900px) {
+    ul.sidenav {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    
+    ul.sidenav li a {
+      float: left;
+      padding: 15px;
+    }
+    
+    div.content {margin-left: 0;}
+  }
+  
+  @media screen and (max-width: 400px) {
+    ul.sidenav li a {
+      text-align: center;
+      float: none;
+    }
 }
