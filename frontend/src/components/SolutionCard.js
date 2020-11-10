@@ -15,7 +15,7 @@ class SolutionCard extends React.Component {
 
     submitSolution = () =>{
         const {solutionBody} = this.state;
-        fetch(`http://localhost:3000/solution/new/${solutionBody}/${this.props.author}`)
+        fetch(`http://localhost:3000/solution/new/${solutionBody}/${this.props.author}/1`)
         this.props.fetchAll();
     }
 
