@@ -22,7 +22,6 @@ class Homework extends React.Component {
     render() {
         const { questionBody} = this.state;
         return (
-            //<div class="column side">
             <div class="column"> 
                 <br></br>
                  <form>

@@ -89,6 +89,13 @@ div.a{
     float: left;
 }
 
+.column_middle{
+  width: 20%;
+  height: 700px;
+  padding-left: 22%;
+  float: left;
+}
+
 .posts_heading
 {
     margin-left: 10px;
