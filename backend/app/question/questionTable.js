@@ -7,7 +7,8 @@ class QuestionTable{
                 if(err){
                     return reject(err);
                 }
-                resolve(response.rows); 
+                const questions = response.rows;
+                resolve({questions}); 
             })
         })
     }

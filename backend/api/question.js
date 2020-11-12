@@ -14,8 +14,9 @@ router.get('/all', (req, res)=>{
         })
 });
 
-router.get('/new/:questionBody/:questionAuthor', (req, res)=>{
-    let newQ = new Question({questionBody: req.params.questionBody, questionAuthor: req.params.questionAuthor});
+router.post('/new', (req, res)=>{
+    console.log('req.body', req.body)
+    let newQ = new Question({questionBody: req.body.questionBody, questionAuthor: req.body.questionAuthor});
     console.log('newQ:', newQ);
     QuestionTable.storeQuestion(newQ)
         .then((rows)=>{
