@@ -13,9 +13,13 @@ const questionReducer = (state = DEFAULT_QUESTION, action) => {
             return {...state, question: [...action.question], status: fetchStates.success};
         case QUESTION.SUBMIT_SUCCESS:
             return {...state, message: action.message, status: fetchStates.success}
+        case QUESTION.FETCH_SINGLE_SUCCESS:
+            return {...state, ...action.question, status: fetchStates.success}
         default:
             return state;
     }
 }
 
 export default questionReducer;
+// "Invalid attempt to spread non-iterable instance.
+// In order to be iterable, non-array objects must have a [Symbol.iterator]() method."

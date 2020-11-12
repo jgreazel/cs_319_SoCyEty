@@ -14,6 +14,17 @@ router.get('/all', (req, res)=>{
         })
 });
 
+router.get('/:questionId', (req, res)=>{
+    QuestionTable.getQuestionById(req.params.questionId)
+        .then((rows)=>{
+            res.json(rows);
+        })
+        .catch((error)=>{
+            error(error)
+        })
+})
+
+
 router.post('/new', (req, res)=>{
     console.log('req.body', req.body)
     let newQ = new Question({questionBody: req.body.questionBody, questionAuthor: req.body.questionAuthor});

@@ -8,15 +8,21 @@ import './index.css';
 // import Solution from './components/Solution';
 import { createStore, applyMiddleware, compose } from 'redux';
 import { Provider } from 'react-redux';
+import {fetchAuthenticated} from './actions/account';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
-import Home from './components/Home';
+import Root from './components/Root';
+import {Router, Switch, Route} from 'react-router-dom';
+import createBrowserHistory from 'history/createBrowserHistory';
+import SelectedQuestion from './components/SelectedQuestion';
 
 // const store = createStore(
 //     rootReducer,
 //     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
 //     applyMiddleware(thunk)
 // );
+
+const history = createBrowserHistory();
 
 const store = createStore(
     rootReducer,
@@ -26,12 +32,34 @@ const store = createStore(
     )
 );
 
-render(
-    <Provider store={store}>
-        <Home/>
-    </Provider>,
-    document.getElementById("root")
-);
+store.dispatch(fetchAuthenticated())
+    .then(()=>{
+        render(
+            <Provider store={store}>
+                <Router history={history}>
+                    <Switch>
+                        <Route exact={true} path='/' component={Root}/>
+                        <Route path='/question/:id' component={SelectedQuestion}/>
+                    </Switch>
+                </Router>
+            </Provider>,
+            document.getElementById("root")
+        );
+    })
+
+    // <Router history={history}>
+    //                 <Switch>
+    //                     <Route path='/' component={Root}/>
+    //                     <Route path='/solution' component={Solution}/>
+    //                 </Switch>
+    // </Router>
+
+// render(
+//     <Provider store={store}>
+//         <Root/>
+//     </Provider>,
+//     document.getElementById("root")
+// );
 
 
 // class App extends React.Component{

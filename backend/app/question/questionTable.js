@@ -3,12 +3,25 @@ const connection = require('../../database');
 class QuestionTable{
     static getAllQuestions(){
         return new Promise((resolve, reject)=>{
-            connection.query('SELECT * FROM question', (err, response) => {
+            connection.query('SELECT * FROM question order by id DESC', (err, response) => {
                 if(err){
                     return reject(err);
                 }
                 const questions = response.rows;
                 resolve({questions}); 
+            })
+        })
+    }
+
+    static getQuestionById(questionId){
+        return new Promise((resolve, reject)=>{
+            connection.query('SELECT * FROM question WHERE question.id = $1',
+            [questionId],
+            (err, response) => {
+                if(err){
+                    return reject(err);
+                }
+                resolve(response.rows); 
             })
         })
     }

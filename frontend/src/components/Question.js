@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Button} from 'react-bootstrap';
+import { Link } from "react-router-dom";
 
 class Question extends Component {
 
@@ -9,7 +10,7 @@ class Question extends Component {
         return(
         <div className='card'>
             <h3>{questionBody}</h3>
-            <Button className="submitButton" onClick={()=>console.log(id)}>See Details</Button>
+            <Link to={{pathname: `/question/${id}`}}><Button className="submitButton">See Details</Button></Link>
             <p><strong>{questionAuthor}</strong>{' asked on:' + displayDate.getMonth() + '/' + displayDate.getDate() + '/' + displayDate.getFullYear()}</p>
             
         </div>
