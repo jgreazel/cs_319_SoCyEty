@@ -4,6 +4,7 @@ import './index.css';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Homework from './components/Homework';
+import SolutionCard from './components/SolutionCard';
 import Comments from './components/Comments';
 import Solution from './components/Solution';
 
@@ -15,7 +16,8 @@ class App extends React.Component{
             password: '',
             error: '',
             login_success: false, // set true for testing
-            questions: []
+            questions: [],
+            solutions: []
         };
 
         this.dismissError = this.dismissError.bind(this);
@@ -27,6 +29,7 @@ class App extends React.Component{
 
     componentDidMount(){
         this.fetchAllQuestions();
+        this.fetchAllSolutions();
     }
 
     fetchAllQuestions = () =>{
@@ -35,6 +38,16 @@ class App extends React.Component{
             .then(json => {
                 console.log(json)
                 this.setState({ questions: json})
+            })
+            .catch(error => console.log('error', error));
+    }
+    
+    fetchAllSolutions = () =>{
+        fetch('http://localhost:3000/solution/all')
+            .then( response => response.json())
+            .then(json => {
+                console.log(json)
+                this.setState({ solutions: json})
             })
             .catch(error => console.log('error', error));
     }
@@ -85,7 +98,10 @@ class App extends React.Component{
                         questions={this.state.questions} 
                         author={this.state.netID}
                         fetchAll={this.fetchAllQuestions}/>
-                    <Solution />
+                    <SolutionCard 
+                        solutions={this.state.solutions}
+                        author={this.state.netID}
+                        fetchAll={this.fetchAllSolutions}/>
                     <Comments />
                 </div>
             );
