@@ -5,8 +5,8 @@ import CycloneReversed from "../assets/CycloneIndexLogoReversed.png";
 class Header extends React.Component{
     render(){
         return(
-            <div class="header">
-                    <img src={Cyclone} class="image_header"/>   SoCYety   <img src={CycloneReversed} class="image_header"/>
+            <div className="header">
+                    <img src={Cyclone} className="image_header"/>   SoCYety   <img src={CycloneReversed} className="image_header"/>
             </div>
         );
     }

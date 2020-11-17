@@ -1,51 +1,36 @@
-import React from 'react';
-import Question from './Question'
+import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import Question from './Question';
+import {fetchAllQuestions} from '../actions/question';
+import QuestionForm from './QuestionForm';
 
-class Homework extends React.Component {
+class Homework extends Component {
     
-    state={
-        questionBody: ''
+    componentDidMount(){
+        this.fetchAllQs();
     }
 
-    handleEvent = (event) => {
-        this.setState({
-            [event.target.name]: event.target.value
-        })
-    }
-
-    submitQuestion = () =>{
-        const {questionBody} = this.state;
-        fetch(`http://localhost:3000/question/new/${questionBody}/${this.props.author}`)
-        this.props.fetchAll();
+    fetchAllQs=()=>{
+        this.props.fetchAllQuestions();
     }
 
     render() {
-        const { questionBody} = this.state;
+        const {question} = this.props;
+        
         return (
-            <div class="column"> 
-                <br></br>
-                 <form>
-                    <textarea
-                        required
-                        id="questionBody"
-                        value={questionBody}
-                        name="questionBody"
-                        placeholder="Ask question here!"
-                        onChange={this.handleEvent}
-                    />
-                </form>
-                <button
-                    onClick={this.submitQuestion}
-                    type="submit"
-                >
-                   Ask!
-                </button>
-                <h2 class="homework_heading">Homework assignments and questions</h2>
-                {this.props.questions.map(question => 
-                    <Question data={question}></Question>
-                )}
+            <div>
+                <div className="column"> 
+                    <h2 className="homework_heading">Homework assignments and questions</h2>
+                    {question.question && question.question.map(q => 
+                        <Question key={q.id} data={q}/>
+                    )}
+                </div>
+                <div className="column"><QuestionForm/></div>
             </div>
         );
     }
 }
-export default Homework;
+export default connect(
+    ({question})=>({question}), 
+    {fetchAllQuestions}
+)(Homework);

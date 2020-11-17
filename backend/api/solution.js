@@ -30,20 +30,37 @@ router.get('/:questionId', (req, res)=>{
         })
 })
 
-router.get('/new/:solutionBody/:solutionAuthor/:questionId', (req, res)=>{
-    let newSol = new Solution({
-        solutionBody: req.params.solutionBody,
-        solutionAuthor: req.params.solutionAuthor,
-        questionId: req.params.questionId
+// router.get('/new/:solutionBody/:solutionAuthor/:questionId', (req, res)=>{
+//     let newSol = new Solution({
+//         solutionBody: req.params.solutionBody,
+//         solutionAuthor: req.params.solutionAuthor,
+//         questionId: req.params.questionId
+//     });
+//     console.log('newSol:', newSol);
+//     SolutionTable.storeSolution(newSol)
+//         .then((rows)=>{
+//             res.json(rows);
+//         })
+//         .catch((error)=>{
+//             console.log(error)
+//         })
+// })
+
+router.post('/new', (req, res)=>{
+    console.log('req.body', req.body)
+    let newSolution = new Solution({
+        solutionBody: req.body.solutionBody, 
+        solutionAuthor: req.body.solutionAuthor,
+        questionId: req.body.questionId
     });
-    console.log('newSol:', newSol);
-    SolutionTable.storeSolution(newSol)
+    console.log('new solution:', newSolution);
+    SolutionTable.storeSolution(newSolution)
         .then((rows)=>{
             res.json(rows);
         })
-        .catch((error)=>{
-            console.log(error)
+        .catch((err)=>{
+            console.log(err)
         })
-})
+});
 
 module.exports = router;
