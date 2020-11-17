@@ -21,5 +21,3 @@ const questionReducer = (state = DEFAULT_QUESTION, action) => {
 }
 
 export default questionReducer;
-// "Invalid attempt to spread non-iterable instance.
-// In order to be iterable, non-array objects must have a [Symbol.iterator]() method."

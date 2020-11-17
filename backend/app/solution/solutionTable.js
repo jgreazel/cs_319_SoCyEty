@@ -7,14 +7,15 @@ class SolutionTable{
                 if(err){
                     return reject(err);
                 }
-                resolve(response.rows); 
+                const solutions = response.rows;
+                resolve({solutions}); 
             })
         })
     }
 
     static getSolutionsForQ(questionId){
         return new Promise((resolve, reject)=>{
-            connection.query('SELECT * FROM solution WHERE solution."questionId" = $1',
+            connection.query('SELECT * FROM solution WHERE solution."questionId" = $1 ORDER BY id DESC',
             [questionId],
             (err, response) => {
                 if(err){

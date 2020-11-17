@@ -19,13 +19,13 @@ class Homework extends Component {
         
         return (
             <div>
-            <div className="column"> 
-                <h2 className="homework_heading">Homework assignments and questions</h2>
-                {question.question && question.question.map(q => 
-                    <Question key={q.id} data={q}/>
-                )}
-            </div>
-            <div className="column"><QuestionForm/></div>
+                <div className="column"> 
+                    <h2 className="homework_heading">Homework assignments and questions</h2>
+                    {question.question && question.question.map(q => 
+                        <Question key={q.id} data={q}/>
+                    )}
+                </div>
+                <div className="column"><QuestionForm/></div>
             </div>
         );
     }
