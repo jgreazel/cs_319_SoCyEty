@@ -43,5 +43,4 @@ class QuestionTable{
     }
 
 }
-
 module.exports = QuestionTable;
