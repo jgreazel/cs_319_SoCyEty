@@ -3,7 +3,7 @@ const connection = require('../../database');
 class CommentTable{
     static getAllComments(){
         return new Promise((resolve, reject)=>{
-            connection.query('SELECT * FROM comment', (err, response) => {
+            connection.query('SELECT * FROM comment order by id DESC', (err, response) => {
                 if(err){
                     return reject(err);
                 }
@@ -14,7 +14,7 @@ class CommentTable{
 
     static getCommentsForSolution(solutionId){
         return new Promise((resolve, reject)=>{
-            connection.query('SELECT * FROM comment WHERE comment."solutionId" = $1',
+            connection.query('SELECT * FROM comment WHERE comment."solutionId" = $1 ORDER BY id DESC',
             [solutionId],
             (err, response) => {
                 if(err){

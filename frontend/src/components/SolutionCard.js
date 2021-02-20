@@ -7,7 +7,7 @@ class SolutionCard extends React.Component {
         const displayDate = new Date(datePosted);
 
         return(
-        <div key={id} className='card'>
+        <div key={id} className='solution-card'>
             <h4>{solutionAuthor}</h4>
             <p>{displayDate.getMonth() + '/' + displayDate.getDate() + '/' + displayDate.getFullYear()}</p>
             <p>{solutionBody}</p>

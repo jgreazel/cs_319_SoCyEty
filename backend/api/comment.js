@@ -24,20 +24,37 @@ router.get('/:solutionId', (req, res)=>{
         })
 })
 
-router.get('/new/:commentBody/:commentAuthor/:solutionId', (req, res)=>{
+// router.get('/new/:commentBody/:commentAuthor/:solutionId', (req, res)=>{
+//     let newComment = new Comment({
+//         commentBody: req.params.commentBody,
+//         commentAuthor: req.params.commentAuthor,
+//         solutionId: req.params.solutionId
+//     });
+//     console.log('newComment:', newComment);
+//     CommentTable.storeComment(newComment)
+//         .then((rows)=>{
+//             res.json(rows);
+//         })
+//         .catch((error)=>{
+//             console.log(error)
+//         })
+// })
+
+router.post('/new', (req, res)=>{
+    console.log('req.body', req.body)
     let newComment = new Comment({
-        commentBody: req.params.commentBody,
-        commentAuthor: req.params.commentAuthor,
-        solutionId: req.params.solutionId
+        commentBody: req.body.commentBody,
+        commentAuthor: req.body.commentAuthor,
+        solutionId: req.body.solutionId
     });
     console.log('newComment:', newComment);
     CommentTable.storeComment(newComment)
         .then((rows)=>{
             res.json(rows);
         })
-        .catch((error)=>{
-            console.log(error)
+        .catch((err)=>{
+            console.log(err)
         })
-})
+});
 
 module.exports = router;

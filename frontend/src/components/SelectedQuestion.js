@@ -16,6 +16,7 @@ class SelectedQuestion extends Component{
     fetchQ=()=>{
         const id = this.props.location.pathname.split('/')[2];
         this.props.fetchQuestionById({id: id});
+
     }
 
     render(){
